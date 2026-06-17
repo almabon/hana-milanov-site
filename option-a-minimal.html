@@ -50,8 +50,8 @@
     .prose { max-width:60ch; color:#3f3b34; font-size:1.08rem; }
     .prose p + p { margin-top:1rem; }
 
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:1.1rem; margin-top:0.5rem; }
-    .rcard { background:#fff; border:1px solid var(--line); border-radius:13px; padding:1.6rem; }
+    .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:0.9rem; margin-top:0.5rem; }
+    .rcard { background:#fff; border:1px solid var(--line); border-radius:13px; padding:1.35rem 1.2rem; }
     .rcard h3 { font-size:1.08rem; margin-bottom:0.45rem; letter-spacing:-0.01em; font-weight:700; }
     .rcard p { font-size:0.95rem; color:#5f5a52; }
 
@@ -66,18 +66,21 @@
     .scholar a:hover { text-decoration:underline; }
 
     .twocol { display:grid; grid-template-columns:1fr 1fr; gap:2.6rem; align-items:start; }
+    .teach-photo img { width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 30%; border-radius:13px; display:block; box-shadow:0 16px 38px rgba(0,0,0,.12); }
+    .impressum { max-width:62ch; color:#45413b; font-size:0.98rem; }
+    .impressum p { margin-bottom:0.85rem; }
+    .impressum strong { color:var(--ink); }
     .factlist { list-style:none; }
     .factlist li { padding:0.85rem 0; border-bottom:1px solid var(--line); font-size:1rem; color:#3f3b34; }
     .factlist li:last-child { border-bottom:none; }
     .factlist strong { display:block; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); margin-bottom:3px; font-weight:700; }
 
-    .contact-card { background:var(--ink); color:#f2efe7; border-radius:18px; padding:3rem; display:flex; flex-wrap:wrap; gap:1.8rem; justify-content:space-between; align-items:flex-end; }
+    .contact-card { background:var(--ink); color:#f2efe7; border-radius:18px; padding:3.6rem 3rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.3rem; }
     .contact-card h2 { font-size:2rem; letter-spacing:-0.025em; }
-    .contact-card p { color:#b9b4a9; margin-top:0.5rem; max-width:34ch; }
-    .contact-card a.mail { color:#ffce4d; text-decoration:none; font-size:1.15rem; font-weight:700; }
-    .contact-card .links { margin-top:0.9rem; }
-    .contact-card .links a { color:#cfcabf; text-decoration:none; margin-left:1.3rem; font-size:0.92rem; }
-    .contact-card .links a:first-child { margin-left:0; }
+    .contact-card p { color:#b9b4a9; margin-top:0.5rem; max-width:38ch; }
+    .contact-card a.mail { color:#ffce4d; text-decoration:none; font-size:1.2rem; font-weight:700; }
+    .contact-card .links { margin-top:0.4rem; }
+    .contact-card .links a { color:#cfcabf; text-decoration:none; margin:0 0.75rem; font-size:0.92rem; }
     .contact-card .links a:hover { color:#fff; }
 
     footer { padding:2.4rem 0 3.4rem; color:#8a857b; font-size:0.85rem; border-top:1px solid var(--line); }
@@ -87,8 +90,10 @@
       .hero { grid-template-columns:1fr; gap:2.5rem; padding:3rem 0; }
       .hero-photo { order:-1; max-width:300px; }
       .navlinks { display:none; }
+      .cards { grid-template-columns:1fr 1fr; }
       .twocol { grid-template-columns:1fr; gap:1.5rem; }
-      .contact-card { padding:2rem; }
+      .teach-photo { order:-1; }
+      .contact-card { padding:2.4rem 1.6rem; }
     }
   </style>
 </head>
@@ -136,7 +141,7 @@
 
     <section id="research">
       <div class="sec-head">Research</div>
-      <h2 class="title">What I study</h2>
+      <h2 class="title">My research interests</h2>
       <div class="cards">
         <div class="rcard"><h3>Opportunity recognition</h3><p>How founders notice and develop the opportunities they choose to pursue.</p></div>
         <div class="rcard"><h3>Resourcefulness under scarcity</h3><p>How early ventures build something out of very little, often through bricolage.</p></div>
@@ -159,13 +164,14 @@
       <div class="sec-head">Teaching &amp; Executive Education</div>
       <h2 class="title">Teaching and executive education</h2>
       <div class="twocol">
-        <div class="prose">
-          <p>I have taught at every level, from bachelor to PhD, in five countries, and in person, online, and hybrid. I work with cases, workshops, role plays, and lectures, and I try to run classes where participants do most of the thinking.</p>
+        <div class="teach-photo">
+          <img src="assets/hana-speaking.jpg" alt="Hana Milanov speaking at a conference" />
         </div>
         <ul class="factlist">
+          <li><strong>Approach</strong> Participant-centered classes that build critical and creative thinking, taught from bachelor to PhD, in five countries, and in person, online, and hybrid.</li>
           <li><strong>Academic Director</strong> EMBA in Innovation and Business Creation, with UnternehmerTUM. Ranked first by the Financial Times in 2023 and 2024.</li>
-          <li><strong>Corporate programs</strong> Siemens, GE Aerospace, and Sandoz. Faculty on the IE-Brown EMBA.</li>
-          <li><strong>Recognition</strong> Several teaching awards at TUM and IE Business School.</li>
+          <li><strong>Corporate programs</strong> Custom executive teaching for Siemens, GE Aerospace, and Sandoz, plus faculty roles on the IE-Brown EMBA.</li>
+          <li><strong>Recognition</strong> Several best-teaching awards at TUM and IE Business School, across executive and online formats.</li>
         </ul>
       </div>
     </section>
@@ -189,22 +195,31 @@
 
     <section id="contact">
       <div class="contact-card">
-        <div>
-          <h2>Get in touch</h2>
-          <p>For speaking, executive programs, research collaboration, or doctoral supervision.</p>
+        <h2>Get in touch</h2>
+        <p>For speaking, executive programs, research collaboration, or doctoral supervision.</p>
+        <a class="mail" href="mailto:hana.milanov@imd.org">hana.milanov@imd.org</a>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/hanamilanov/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="#">IMD Profile <span class="check">[CHECK]</span></a>
         </div>
-        <div style="text-align:left;">
-          <a class="mail" href="mailto:hana.milanov@imd.org">hana.milanov@imd.org</a>
-          <div class="links">
-            <a href="https://www.linkedin.com/in/hanamilanov/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="#">IMD Profile <span class="check">[CHECK]</span></a>
-          </div>
-        </div>
+      </div>
+    </section>
+
+    <section id="impressum">
+      <div class="sec-head">Legal</div>
+      <h2 class="title">Impressum</h2>
+      <div class="impressum">
+        <p>Information provided as legally required. <span class="check">[CHECK] confirm jurisdiction: Germany (§ 5 DDG) or Switzerland</span></p>
+        <p><strong>Responsible for content</strong><br/>Prof. Hana Milanov</p>
+        <p><strong>Address</strong><br/><span class="check">[CHECK] postal address</span></p>
+        <p><strong>Contact</strong><br/>Email: hana.milanov@imd.org<br/>Phone: <span class="check">[CHECK] phone number</span></p>
+        <p><strong>VAT identification number</strong><br/><span class="check">[CHECK] if applicable</span></p>
+        <p><strong>Liability and copyright</strong><br/><span class="check">[CHECK] standard liability/copyright disclaimer text</span></p>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. <span class="check">[CHECK] confirm exact title and chair</span></footer>
+  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. &nbsp;·&nbsp; <a href="#impressum" style="color:inherit;">Impressum</a> &nbsp;·&nbsp; <span class="check">[CHECK] confirm exact title and chair</span></footer>
 </body>
 </html>

@@ -36,7 +36,8 @@
     .hero { display:grid; grid-template-columns:1.25fr 0.75fr; gap:3.2rem; align-items:stretch; padding:4.5rem 0; }
     .hero-left { display:flex; flex-direction:column; justify-content:center; }
     .hi { font-family:'Space Grotesk',sans-serif; color:var(--muted); font-size:1.05rem; }
-    .hero h1 { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2.6rem, 5.8vw, 4.4rem); line-height:1.06; letter-spacing:-0.03em; margin:0.9rem 0 1.4rem; }
+    .hero h1 { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2.6rem, 5.8vw, 4.4rem); line-height:1.22; letter-spacing:-0.03em; margin:0.9rem 0 1.4rem; }
+    .hl { line-height:inherit; }
     .hero .sub { color:var(--muted); font-size:1.12rem; max-width:42ch; }
     .hero .actions { margin-top:2rem; display:flex; gap:0.8rem; flex-wrap:wrap; }
     .btn { text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.94rem; padding:0.72rem 1.4rem; border-radius:8px; transition:all .15s; }
@@ -59,8 +60,12 @@
     .body { color:#403c33; font-size:1.12rem; max-width:62ch; margin-top:1.4rem; }
     .body + .body { margin-top:1rem; }
 
-    .rgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(235px,1fr)); gap:1.1rem; margin-top:2.4rem; }
-    .rcard { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.7rem; }
+    .rgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.9rem; margin-top:2.4rem; }
+    .rcard { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.4rem 1.25rem; }
+    .teach-photo img { width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 30%; border-radius:14px; display:block; }
+    .impressum { max-width:62ch; color:#403c33; font-size:1rem; }
+    .impressum p { margin-bottom:0.85rem; }
+    .impressum strong { color:var(--ink); font-family:'Space Grotesk',sans-serif; }
     .rcard .n { font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--yellow); font-size:1.1rem; -webkit-text-stroke:0.4px #c79e00; }
     .rcard h3 { font-family:'Space Grotesk',sans-serif; font-size:1.12rem; margin:0.5rem 0 0.4rem; font-weight:600; }
     .rcard p { color:var(--muted); font-size:0.95rem; }
@@ -81,13 +86,13 @@
     .flist .k { font-family:'Space Grotesk',sans-serif; color:var(--muted); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; }
     .flist .v { margin-top:0.3rem; color:#403c33; }
 
-    .contact { background:var(--ink); color:var(--bg); border-radius:20px; padding:3.6rem 3rem; }
+    .contact { background:var(--ink); color:var(--bg); border-radius:20px; padding:4rem 3rem; text-align:center; }
     .contact h2 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4.6vw,3rem); letter-spacing:-0.02em; }
     .contact h2 .hl { color:var(--ink); }
-    .contact p { color:#b6b2a6; margin-top:0.7rem; max-width:40ch; }
+    .contact p { color:#b6b2a6; margin-top:0.7rem; max-width:40ch; margin-left:auto; margin-right:auto; }
     .contact a.mail { display:inline-block; margin-top:1.6rem; font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:600; color:var(--yellow); text-decoration:none; }
     .contact .social { margin-top:1.6rem; }
-    .contact .social a { color:#cfcabd; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:500; margin-right:1.5rem; }
+    .contact .social a { color:#cfcabd; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:500; margin:0 0.75rem; }
     .contact .social a:hover { color:#fff; }
 
     footer { padding:2.5rem 0 3.4rem; color:var(--muted); font-size:0.85rem; }
@@ -97,7 +102,9 @@
       .hero { grid-template-columns:1fr; gap:2rem; padding:3rem 0; }
       .hero-photo { min-height:340px; order:-1; }
       .navlinks { display:none; }
+      .rgrid { grid-template-columns:1fr 1fr; }
       .split { grid-template-columns:1fr; gap:2rem; }
+      .teach-photo { order:-1; }
       .contact { padding:2.4rem 1.8rem; }
     }
   </style>
@@ -133,17 +140,6 @@
     </div>
   </header>
 
-  <div class="strip">
-    <div class="wrap">
-      <span><b>IMD Lausanne</b></span><span class="sep">/</span>
-      <span>FT50 research</span><span class="sep">/</span>
-      <span>Covered by <b>Forbes</b></span><span class="sep">/</span>
-      <span>Unipreneurs Top 20</span><span class="sep">/</span>
-      <span>EMBA Academic Director</span><span class="sep">/</span>
-      <span>Five countries</span>
-    </div>
-  </div>
-
   <main class="wrap">
     <section id="about">
       <div class="label">About</div>
@@ -154,7 +150,7 @@
 
     <section id="research">
       <div class="label">Research</div>
-      <div class="big grotesk">What I study.</div>
+      <div class="big grotesk">My research interests.</div>
       <div class="rgrid">
         <div class="rcard"><div class="n">01</div><h3>Opportunity recognition</h3><p>How founders notice and develop the opportunities they pursue.</p></div>
         <div class="rcard"><div class="n">02</div><h3>Resourcefulness</h3><p>How early ventures build something out of very little, often through bricolage.</p></div>
@@ -174,11 +170,11 @@
     <section id="teaching">
       <div class="label">Teaching &amp; Executive Education</div>
       <div class="split">
-        <div>
-          <div class="big grotesk split-head" style="font-size:clamp(1.7rem,3.6vw,2.4rem);">Teaching at every level.</div>
-          <p class="body">From bachelor to PhD, in five countries, and in person, online, and hybrid. I work with cases, workshops, role plays, and lectures, and aim for classes where participants do most of the thinking.</p>
+        <div class="teach-photo">
+          <img src="assets/hana-speaking.jpg" alt="Hana Milanov speaking at a conference" />
         </div>
         <ul class="flist">
+          <li><div class="k">Approach</div><div class="v">Participant-centered classes from bachelor to PhD, in five countries, and in person, online, and hybrid.</div></li>
           <li><div class="k">Academic Director</div><div class="v">EMBA in Innovation and Business Creation, with UnternehmerTUM. Ranked first by the Financial Times in 2023 and 2024.</div></li>
           <li><div class="k">Corporate programs</div><div class="v">Siemens, GE Aerospace, and Sandoz. Faculty on the IE-Brown EMBA.</div></li>
           <li><div class="k">Recognition</div><div class="v">Several teaching awards at TUM and IE Business School.</div></li>
@@ -214,8 +210,21 @@
         </div>
       </div>
     </section>
+
+    <section id="impressum">
+      <div class="label">Legal</div>
+      <div class="big grotesk" style="font-size:clamp(1.7rem,3.6vw,2.4rem);">Impressum</div>
+      <div class="impressum" style="margin-top:1.6rem;">
+        <p>Information provided as legally required. <span class="check">[CHECK] confirm jurisdiction: Germany (§ 5 DDG) or Switzerland</span></p>
+        <p><strong>Responsible for content</strong><br/>Prof. Hana Milanov</p>
+        <p><strong>Address</strong><br/><span class="check">[CHECK] postal address</span></p>
+        <p><strong>Contact</strong><br/>Email: hana.milanov@imd.org<br/>Phone: <span class="check">[CHECK] phone number</span></p>
+        <p><strong>VAT identification number</strong><br/><span class="check">[CHECK] if applicable</span></p>
+        <p><strong>Liability and copyright</strong><br/><span class="check">[CHECK] standard liability/copyright disclaimer text</span></p>
+      </div>
+    </section>
   </main>
 
-  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. <span class="check">[CHECK] confirm exact title and chair</span></footer>
+  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. &nbsp;·&nbsp; <a href="#impressum" style="color:inherit;">Impressum</a> &nbsp;·&nbsp; <span class="check">[CHECK] confirm exact title and chair</span></footer>
 </body>
 </html>

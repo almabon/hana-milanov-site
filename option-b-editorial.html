@@ -63,7 +63,11 @@
     .contact .social a { color:var(--muted); text-decoration:none; margin:0 0.5rem; }
     .contact .social a:hover { color:var(--accent); }
 
+    .impressum { max-width:34rem; margin:0 auto; }
+    .impressum p { margin-bottom:0.8rem; font-size:1rem; color:#3b372e; }
+    .impressum strong { font-family:'Fraunces',serif; color:var(--accent); }
     footer { text-align:center; padding:2.4rem 0 3.4rem; color:var(--muted); font-size:0.84rem; border-top:1px solid var(--line); }
+    footer a { color:inherit; }
     .check { background:#fff1bf; color:#7a5c00; font-weight:600; font-size:0.78em; padding:1px 6px; border-radius:5px; }
 
     @media (max-width:640px){ .navlinks{display:none;} }
@@ -93,7 +97,6 @@
 
   <main class="wrap">
     <section id="about">
-      <div class="sec-label">About</div>
       <h2 class="title serif">About</h2>
       <p class="body drop">Hana Milanov is Professor of Entrepreneurship at IMD in Lausanne. She has lived and worked in five countries, and her research looks at how new ventures get off the ground.</p>
       <p class="body">Her work studies how founders spot opportunities, raise resources when they start with very little, and handle the human side of building a company, including questions of identity, team, and career. It has been published in leading journals such as the Strategic Management Journal and the Journal of Business Venturing, and covered in the press, including Forbes.</p>
@@ -114,7 +117,6 @@
     </section>
 
     <section id="teaching">
-      <div class="sec-label">Teaching &amp; Executive Education</div>
       <h2 class="title serif">Teaching and executive education</h2>
       <p class="body" style="text-align:center; max-width:52ch; margin:0 auto 1.8rem;">I have taught at every level, from bachelor to PhD, in five countries, and in person, online, and hybrid, using cases, workshops, role plays, and lectures.</p>
       <div style="max-width:32rem; margin:0 auto;">
@@ -125,7 +127,6 @@
     </section>
 
     <section id="speaking">
-      <div class="sec-label">Speaking &amp; Media</div>
       <h2 class="title serif">Speaking and media</h2>
       <div style="max-width:34rem; margin:0 auto;">
         <div class="lead-row"><span class="b">Media</span><span>Research covered in Forbes (2024 and 2025) on parenthood and startup culture, and on DEI allyship.</span></div>
@@ -146,8 +147,20 @@
         <a href="#">IMD Profile <span class="check">[CHECK]</span></a>
       </div>
     </section>
+
+    <section id="impressum">
+      <h2 class="title serif">Impressum</h2>
+      <div class="impressum">
+        <p>Information provided as legally required. <span class="check">[CHECK] confirm jurisdiction: Germany (§ 5 DDG) or Switzerland</span></p>
+        <p><strong>Responsible for content</strong><br/>Prof. Hana Milanov</p>
+        <p><strong>Address</strong><br/><span class="check">[CHECK] postal address</span></p>
+        <p><strong>Contact</strong><br/>Email: hana.milanov@imd.org<br/>Phone: <span class="check">[CHECK] phone number</span></p>
+        <p><strong>VAT identification number</strong><br/><span class="check">[CHECK] if applicable</span></p>
+        <p><strong>Liability and copyright</strong><br/><span class="check">[CHECK] standard liability/copyright disclaimer text</span></p>
+      </div>
+    </section>
   </main>
 
-  <footer>© 2026 Hana Milanov, IMD Lausanne. <span class="check">[CHECK] confirm exact title and chair</span></footer>
+  <footer>© 2026 Hana Milanov, IMD Lausanne. &nbsp;·&nbsp; <a href="#impressum">Impressum</a> &nbsp;·&nbsp; <span class="check">[CHECK] confirm exact title and chair</span></footer>
 </body>
 </html>
