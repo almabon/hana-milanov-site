@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hana Milanov — Website Design Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f6f5f2;
+      color: #1a1a1a;
+      line-height: 1.5;
+      padding: 6vw 6vw 8vw;
+    }
+    header { max-width: 760px; margin: 0 auto 3.5rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #9a8f6f; font-weight: 600; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; margin: 0.6rem 0 1rem; letter-spacing: -0.02em; }
+    header p { color: #555; max-width: 60ch; }
+    .grid { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .card { background: #fff; border: 1px solid #e7e4dc; border-radius: 14px; padding: 1.8rem; text-decoration: none; color: inherit; transition: transform .18s ease, box-shadow .18s ease, border-color .18s; display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(0,0,0,.08); border-color: #d8d3c6; }
+    .tag { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: #b58a00; }
+    .card h2 { font-size: 1.25rem; margin: 0.5rem 0 0.6rem; letter-spacing: -0.01em; }
+    .card p { font-size: 0.92rem; color: #555; flex: 1; }
+    .card .go { margin-top: 1.2rem; font-weight: 600; font-size: 0.9rem; color: #1a1a1a; }
+    .swatch { height: 8px; border-radius: 6px; margin-bottom: 1.2rem; }
+    .note { max-width: 760px; margin: 3rem auto 0; font-size: 0.88rem; color: #777; border-top: 1px solid #e7e4dc; padding-top: 1.4rem; }
+    .note code { background:#ece9e1; padding:1px 6px; border-radius:5px; font-size:0.85em; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Design preview · pick one</div>
+    <h1>Three directions for hanamilanov.com</h1>
+    <p>Same content, three different looks. Open each, scroll the full page, and tell Alma which feels right — or which pieces to mix. Placeholder copy is pulled from the CV; anything marked <strong>[CHECK]</strong> needs your review.</p>
+  </header>
+
+  <div class="grid">
+    <a class="card" href="option-a-minimal.html">
+      <div class="swatch" style="background:linear-gradient(90deg,#1a1a1a,#c9a227)"></div>
+      <span class="tag">Option A</span>
+      <h2>Modern Minimal</h2>
+      <p>Clean sans-serif, generous white space, big hero photo, a warm gold accent. Closest to the “modern faculty site” brief — calm, confident, contemporary.</p>
+      <span class="go">View Option A →</span>
+    </a>
+
+    <a class="card" href="option-b-editorial.html">
+      <div class="swatch" style="background:linear-gradient(90deg,#2b2b2b,#a89a7c)"></div>
+      <span class="tag">Option B</span>
+      <h2>Editorial / Serif</h2>
+      <p>Typography-led and scholarly. Serif headlines, a narrow reading column, warm paper background. Timeless and book-like — the most “classic academic”.</p>
+      <span class="go">View Option B →</span>
+    </a>
+
+    <a class="card" href="option-c-bold.html">
+      <div class="swatch" style="background:linear-gradient(90deg,#111,#ffd23f)"></div>
+      <span class="tag">Option C</span>
+      <h2>Bold / Narrative</h2>
+      <p>Big type statements, strong colour, a story-first scroll — inspired by the Vendraminelli site. Distinctive and memorable, still clean.</p>
+      <span class="go">View Option C →</span>
+    </a>
+  </div>
+
+  <p class="note">To preview locally: open any <code>.html</code> file in a browser. These are static prototypes — once you choose, the winner becomes the real multi-page site (Home / About / Research / Teaching &amp; Executive Education / Speaking &amp; Media / Contact) on GitHub Pages.</p>
+</body>
+</html>
