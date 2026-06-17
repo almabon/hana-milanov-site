@@ -3,95 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hana Milanov — Professor of Entrepreneurship, IMD</title>
-  <meta name="description" content="Hana Milanov is a Professor of Entrepreneurship at IMD Lausanne, researching opportunity recognition, resource mobilization, and the human side of venture creation." />
+  <title>Hana Milanov | Professor of Entrepreneurship, IMD Lausanne</title>
+  <meta name="description" content="Hana Milanov is Professor of Entrepreneurship at IMD Lausanne. She researches how new ventures get started, raise resources, and grow." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #fbfaf7;
-      --ink: #1a1a1a;
-      --muted: #6b6660;
-      --line: #e7e3da;
-      --gold: #b58a00;
-      --gold-soft: #f4ecd4;
+      --bg: #fcfbf8;
+      --ink: #1b1a17;
+      --muted: #66625a;
+      --line: #e8e4da;
+      --gold: #a87b16;
+      --gold-soft: #f3ead2;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 7vw; }
-    a { color: inherit; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Plus Jakarta Sans', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:1060px; margin:0 auto; padding:0 7vw; }
+    a { color:inherit; }
 
-    /* Nav */
-    nav { position: sticky; top: 0; z-index: 50; background: rgba(251,250,247,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .brand { font-weight: 700; letter-spacing: -0.01em; font-size: 1.02rem; }
-    .navlinks { display: flex; gap: 1.8rem; }
-    .navlinks a { text-decoration: none; font-size: 0.9rem; font-weight: 500; color: #555; transition: color .15s; }
-    .navlinks a:hover { color: var(--gold); }
-    .menu-btn { display: none; }
+    nav { position:sticky; top:0; z-index:50; background:rgba(252,251,248,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+    nav .wrap { display:flex; align-items:center; justify-content:space-between; height:66px; }
+    .brand { font-weight:700; letter-spacing:-0.02em; font-size:1.05rem; }
+    .navlinks { display:flex; gap:1.9rem; }
+    .navlinks a { text-decoration:none; font-size:0.9rem; font-weight:500; color:var(--muted); transition:color .15s; }
+    .navlinks a:hover { color:var(--gold); }
 
-    /* Hero */
-    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; padding: 5.5rem 0 5rem; }
-    .hero .eyebrow { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
-    .hero h1 { font-size: clamp(2.4rem, 5.2vw, 3.6rem); line-height: 1.05; letter-spacing: -0.03em; font-weight: 700; margin: 1rem 0 1.2rem; }
-    .hero .lead { font-size: 1.18rem; color: #4a4640; max-width: 34ch; }
-    .hero .cta { margin-top: 2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; }
-    .btn { text-decoration: none; font-weight: 600; font-size: 0.92rem; padding: 0.7rem 1.3rem; border-radius: 999px; transition: all .15s; }
-    .btn.primary { background: var(--ink); color: #fff; }
-    .btn.primary:hover { background: var(--gold); }
-    .btn.ghost { border: 1px solid var(--line); color: var(--ink); }
-    .btn.ghost:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-photo { position: relative; }
-    .hero-photo img { width: 100%; border-radius: 18px; display: block; box-shadow: 0 24px 60px rgba(0,0,0,.12); }
-    .hero-photo::after { content: ""; position: absolute; inset: 18px -18px -18px 18px; background: var(--gold-soft); border-radius: 18px; z-index: -1; }
+    .hero { display:grid; grid-template-columns:1.05fr 0.95fr; gap:4.5rem; align-items:center; padding:5.5rem 0 5rem; }
+    .eyebrow { font-size:0.82rem; letter-spacing:0.04em; color:var(--gold); font-weight:600; }
+    .hero h1 { font-size:clamp(2.5rem, 5.4vw, 3.7rem); line-height:1.04; letter-spacing:-0.035em; font-weight:800; margin:0.9rem 0 1.3rem; }
+    .hero .lead { font-size:1.18rem; color:var(--muted); max-width:36ch; line-height:1.55; }
+    .cta { margin-top:2.2rem; display:flex; gap:0.8rem; flex-wrap:wrap; }
+    .btn { text-decoration:none; font-weight:600; font-size:0.92rem; padding:0.72rem 1.35rem; border-radius:10px; transition:all .15s; }
+    .btn.primary { background:var(--ink); color:#fff; }
+    .btn.primary:hover { background:var(--gold); }
+    .btn.ghost { border:1px solid var(--line); color:var(--ink); }
+    .btn.ghost:hover { border-color:var(--gold); color:var(--gold); }
+    .hero-photo { position:relative; }
+    .hero-photo img { width:100%; border-radius:16px; display:block; box-shadow:0 22px 50px rgba(0,0,0,.12); }
+    .hero-photo::after { content:""; position:absolute; inset:16px -16px -16px 16px; background:var(--gold-soft); border-radius:16px; z-index:-1; }
 
-    /* Sections */
-    section { padding: 4.5rem 0; border-top: 1px solid var(--line); }
-    .sec-head { font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.4rem; }
-    h2.title { font-size: clamp(1.6rem, 3.2vw, 2.1rem); letter-spacing: -0.02em; margin-bottom: 1.2rem; font-weight: 700; }
-    .prose { max-width: 62ch; color: #45413b; font-size: 1.06rem; }
-    .prose p + p { margin-top: 1rem; }
+    section { padding:4.2rem 0; border-top:1px solid var(--line); }
+    .sec-head { font-size:0.82rem; letter-spacing:0.08em; color:var(--gold); font-weight:700; text-transform:uppercase; margin-bottom:1.1rem; }
+    h2.title { font-size:clamp(1.7rem, 3.4vw, 2.2rem); letter-spacing:-0.025em; margin-bottom:1.4rem; font-weight:800; }
+    .prose { max-width:60ch; color:#3f3b34; font-size:1.08rem; }
+    .prose p + p { margin-top:1rem; }
 
-    /* Research cards */
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.2rem; margin-top: 1rem; }
-    .rcard { background:#fff; border:1px solid var(--line); border-radius:14px; padding:1.6rem; }
-    .rcard h3 { font-size: 1.08rem; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-    .rcard p { font-size: 0.94rem; color:#5f5a52; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:1.1rem; margin-top:0.5rem; }
+    .rcard { background:#fff; border:1px solid var(--line); border-radius:13px; padding:1.6rem; }
+    .rcard h3 { font-size:1.08rem; margin-bottom:0.45rem; letter-spacing:-0.01em; font-weight:700; }
+    .rcard p { font-size:0.95rem; color:#5f5a52; }
 
-    /* Publications */
-    .pubs { list-style: none; margin-top: 0.5rem; }
-    .pubs li { padding: 1.1rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 78px 1fr; gap: 1.2rem; }
-    .pubs li:last-child { border-bottom: none; }
-    .pubs .yr { color: var(--gold); font-weight: 600; font-size: 0.95rem; }
-    .pubs .ttl { font-weight: 600; }
-    .pubs .jrnl { color:#6f6a61; font-size: 0.92rem; font-style: italic; }
+    .pubs { list-style:none; margin-top:1.8rem; }
+    .pubs li { padding:1.15rem 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:62px 1fr; gap:1.1rem; }
+    .pubs li:last-child { border-bottom:none; }
+    .pubs .yr { color:var(--gold); font-weight:700; font-size:0.95rem; }
+    .pubs .ttl { font-weight:600; line-height:1.4; }
+    .pubs .jrnl { color:#6f6a61; font-size:0.92rem; }
+    .scholar { margin-top:1.4rem; font-size:0.95rem; }
+    .scholar a { color:var(--gold); font-weight:600; text-decoration:none; }
+    .scholar a:hover { text-decoration:underline; }
 
-    /* Two-col blocks */
-    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; }
-    .factlist { list-style: none; }
-    .factlist li { padding: 0.7rem 0; border-bottom: 1px solid var(--line); font-size: 0.98rem; color:#45413b; }
+    .twocol { display:grid; grid-template-columns:1fr 1fr; gap:2.6rem; align-items:start; }
+    .factlist { list-style:none; }
+    .factlist li { padding:0.85rem 0; border-bottom:1px solid var(--line); font-size:1rem; color:#3f3b34; }
     .factlist li:last-child { border-bottom:none; }
-    .factlist strong { display:block; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); margin-bottom:2px; }
+    .factlist strong { display:block; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); margin-bottom:3px; font-weight:700; }
 
-    /* Contact */
-    .contact-card { background: var(--ink); color: #f3f1ea; border-radius: 18px; padding: 3rem; display:flex; flex-wrap:wrap; gap:2rem; justify-content: space-between; align-items: center; }
-    .contact-card h2 { font-size: 1.9rem; letter-spacing: -0.02em; }
-    .contact-card a.mail { color:#ffd23f; text-decoration: none; font-size: 1.15rem; font-weight:600; }
-    .contact-card .links a { color:#cfcabf; text-decoration:none; margin-left:1.2rem; font-size:0.92rem; }
+    .contact-card { background:var(--ink); color:#f2efe7; border-radius:18px; padding:3rem; display:flex; flex-wrap:wrap; gap:1.8rem; justify-content:space-between; align-items:flex-end; }
+    .contact-card h2 { font-size:2rem; letter-spacing:-0.025em; }
+    .contact-card p { color:#b9b4a9; margin-top:0.5rem; max-width:34ch; }
+    .contact-card a.mail { color:#ffce4d; text-decoration:none; font-size:1.15rem; font-weight:700; }
+    .contact-card .links { margin-top:0.9rem; }
+    .contact-card .links a { color:#cfcabf; text-decoration:none; margin-left:1.3rem; font-size:0.92rem; }
+    .contact-card .links a:first-child { margin-left:0; }
     .contact-card .links a:hover { color:#fff; }
 
-    footer { padding: 2.5rem 0 3.5rem; color:#8a857b; font-size:0.85rem; border-top:1px solid var(--line); }
+    footer { padding:2.4rem 0 3.4rem; color:#8a857b; font-size:0.85rem; border-top:1px solid var(--line); }
+    .check { background:#fff1bf; color:#7a5c00; font-weight:600; font-size:0.78em; padding:1px 6px; border-radius:5px; white-space:nowrap; }
 
-    .check { background:#fff3c4; color:#7a5c00; font-weight:600; font-size:0.78em; padding:1px 6px; border-radius:5px; white-space:nowrap; }
-
-    @media (max-width: 760px) {
-      .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0; }
-      .hero-photo { order: -1; max-width: 320px; }
-      .navlinks { display: none; }
-      .twocol { grid-template-columns: 1fr; }
-      .contact-card { padding: 2rem; }
+    @media (max-width:760px) {
+      .hero { grid-template-columns:1fr; gap:2.5rem; padding:3rem 0; }
+      .hero-photo { order:-1; max-width:300px; }
+      .navlinks { display:none; }
+      .twocol { grid-template-columns:1fr; gap:1.5rem; }
+      .contact-card { padding:2rem; }
     }
   </style>
 </head>
@@ -112,11 +109,11 @@
   <header class="wrap">
     <div class="hero">
       <div>
-        <div class="eyebrow">Professor of Entrepreneurship · IMD Lausanne</div>
-        <h1>Understanding how entrepreneurs see, build, and belong.</h1>
-        <p class="lead">I research how founders recognize opportunities, mobilize resources against the odds, and navigate the human side of building ventures.</p>
+        <div class="eyebrow">Professor of Entrepreneurship, IMD Lausanne</div>
+        <h1>Hana Milanov</h1>
+        <p class="lead">I research how new ventures get started, raise resources, and grow, and what gets in the way.</p>
         <div class="cta">
-          <a class="btn primary" href="#research">Explore my research</a>
+          <a class="btn primary" href="#research">Read my research</a>
           <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
       </div>
@@ -129,64 +126,63 @@
   <main class="wrap">
     <section id="about">
       <div class="sec-head">About</div>
-      <h2 class="title">A global perspective on entrepreneurship.</h2>
+      <h2 class="title">About</h2>
       <div class="prose">
-        <p>Hana Milanov is a Professor of Entrepreneurship at IMD in Lausanne. With experience spanning five countries, she combines academic rigor, entrepreneurial insight, and a genuinely global perspective.</p>
-        <p>Her research — published in FT50 journals and featured in outlets including <em>Forbes</em> — examines how entrepreneurs recognize and develop opportunities, mobilize resources, and navigate the human dimensions of venture creation, including the role of identity, teams, and career context in shaping entrepreneurial decisions and outcomes.</p>
-        <p>Before joining IMD, she spent over a decade at the Technical University of Munich, where she served as Senior Vice-President for International Alliances and Alumni and as Academic Director of the FT&nbsp;#1-ranked EMBA in Innovation and Business Creation.</p>
+        <p>Hana Milanov is Professor of Entrepreneurship at IMD in Lausanne. She has lived and worked in five countries, and her research looks at how new ventures get off the ground.</p>
+        <p>Her work studies how founders spot opportunities, raise resources when they start with very little, and handle the human side of building a company, including questions of identity, team, and career. It has been published in leading journals such as the Strategic Management Journal and the Journal of Business Venturing, and covered in the press, including Forbes.</p>
+        <p>Before IMD she spent more than a decade at the Technical University of Munich, where she served as Senior Vice President for International Alliances and Alumni and directed the EMBA in Innovation and Business Creation, ranked first by the Financial Times.</p>
       </div>
     </section>
 
     <section id="research">
       <div class="sec-head">Research</div>
-      <h2 class="title">Four threads in my work.</h2>
+      <h2 class="title">What I study</h2>
       <div class="cards">
-        <div class="rcard"><h3>Opportunity &amp; cognition</h3><p>How entrepreneurs recognize, frame, and develop opportunities — and how mindset shapes what they pursue.</p></div>
-        <div class="rcard"><h3>Resourcefulness under scarcity</h3><p>Bricolage and resource mobilization when early-stage ventures have almost nothing to work with.</p></div>
-        <div class="rcard"><h3>Gender, identity &amp; inclusion</h3><p>From femtech funding gaps to male allyship — how identity and bias shape who gets backed.</p></div>
-        <div class="rcard"><h3>Networks, status &amp; growth</h3><p>How a venture’s first relationships imprint its future status, legitimacy, and path abroad.</p></div>
+        <div class="rcard"><h3>Opportunity recognition</h3><p>How founders notice and develop the opportunities they choose to pursue.</p></div>
+        <div class="rcard"><h3>Resourcefulness under scarcity</h3><p>How early ventures build something out of very little, often through bricolage.</p></div>
+        <div class="rcard"><h3>Gender and inclusion</h3><p>Funding gaps in femtech, bias in crowdfunding, and how male allyship can help.</p></div>
+        <div class="rcard"><h3>Networks and status</h3><p>How a venture's first relationships shape its reputation and its growth abroad.</p></div>
       </div>
 
-      <h3 style="margin:2.6rem 0 0.4rem; font-size:1.05rem; letter-spacing:0.04em; text-transform:uppercase; color:#6f6a61;">Selected publications</h3>
+      <h3 style="margin-top:2.6rem; font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; color:#6f6a61; font-weight:700;">Selected publications</h3>
       <ul class="pubs">
-        <li><span class="yr">2026</span><span><span class="ttl">Can Lack-of-Fit Penalties Apply to Male Entrepreneurs? Equity Fundraising in Femtech.</span><br/><span class="jrnl">Entrepreneurship Theory &amp; Practice</span> · with Seigner &amp; Lundmark</span></li>
-        <li><span class="yr">2023</span><span><span class="ttl">Tweeting like Elon? Confrontational language and social-media engagement for new ventures.</span><br/><span class="jrnl">Journal of Business Venturing</span> · with Seigner &amp; Lundmark</span></li>
-        <li><span class="yr">2021</span><span><span class="ttl">Beyond bricolage: Resource mobilization under extreme resource scarcity.</span><br/><span class="jrnl">Journal of Business Venturing</span> · with Reypens &amp; Bacq</span></li>
-        <li><span class="yr">2014</span><span><span class="ttl">When do domestic alliances help new ventures abroad?</span><br/><span class="jrnl">Journal of Business Venturing</span> · with Fernhaber</span></li>
-        <li><span class="yr">2013</span><span><span class="ttl">The power of the first relationship: initial network and future status.</span><br/><span class="jrnl">Strategic Management Journal</span> · with Shepherd</span></li>
+        <li><span class="yr">2026</span><span><span class="ttl">Can Lack-of-Fit Penalties Apply to Male Entrepreneurs? Equity Fundraising in Femtech.</span><br/><span class="jrnl">Entrepreneurship Theory &amp; Practice, with Seigner and Lundmark</span></span></li>
+        <li><span class="yr">2023</span><span><span class="ttl">Tweeting like Elon? Confrontational language and social media engagement for new ventures.</span><br/><span class="jrnl">Journal of Business Venturing, with Seigner and Lundmark</span></span></li>
+        <li><span class="yr">2021</span><span><span class="ttl">Beyond bricolage: early-stage technology ventures' resource mobilization under extreme scarcity.</span><br/><span class="jrnl">Journal of Business Venturing, with Reypens and Bacq</span></span></li>
+        <li><span class="yr">2014</span><span><span class="ttl">When do domestic alliances help new ventures abroad?</span><br/><span class="jrnl">Journal of Business Venturing, with Fernhaber</span></span></li>
+        <li><span class="yr">2013</span><span><span class="ttl">The power of the first relationship: initial network and future status.</span><br/><span class="jrnl">Strategic Management Journal, with Shepherd</span></span></li>
       </ul>
-      <p style="margin-top:1rem; font-size:0.9rem; color:#6f6a61;">Full list on <a href="#" style="color:var(--gold); font-weight:600;">Google Scholar →</a> <span class="check">[CHECK] link Scholar profile</span></p>
+      <p class="scholar"><a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">See all publications on Google Scholar</a></p>
     </section>
 
     <section id="teaching">
       <div class="sec-head">Teaching &amp; Executive Education</div>
-      <h2 class="title">Participant-centered, across every level.</h2>
+      <h2 class="title">Teaching and executive education</h2>
       <div class="twocol">
         <div class="prose">
-          <p>I teach across bachelor, master’s, MBA, Executive MBA, and doctoral programs — in five countries and in presential, online, and hybrid formats — using workshops, case-based teaching, role-plays, and lectures.</p>
-          <p>My goal is to orchestrate a participant-centered experience that develops critical and creative thinking and opens new perspectives on the material.</p>
+          <p>I have taught at every level, from bachelor to PhD, in five countries, and in person, online, and hybrid. I work with cases, workshops, role plays, and lectures, and I try to run classes where participants do most of the thinking.</p>
         </div>
         <ul class="factlist">
-          <li><strong>Academic Director</strong> EMBA in Innovation &amp; Business Creation, with UnternehmerTUM — FT&nbsp;#1 ranked (2023, 2024)</li>
-          <li><strong>Corporate programs</strong> Siemens, GE Aerospace, Sandoz; IE-Brown EMBA</li>
-          <li><strong>Recognition</strong> Multiple best-teaching awards at TUM and IE Business School</li>
+          <li><strong>Academic Director</strong> EMBA in Innovation and Business Creation, with UnternehmerTUM. Ranked first by the Financial Times in 2023 and 2024.</li>
+          <li><strong>Corporate programs</strong> Siemens, GE Aerospace, and Sandoz. Faculty on the IE-Brown EMBA.</li>
+          <li><strong>Recognition</strong> Several teaching awards at TUM and IE Business School.</li>
         </ul>
       </div>
     </section>
 
     <section id="speaking">
       <div class="sec-head">Speaking &amp; Media</div>
-      <h2 class="title">In the ecosystem and in the press.</h2>
+      <h2 class="title">Speaking and media</h2>
       <div class="twocol">
         <ul class="factlist">
-          <li><strong>In the media</strong> Research featured in <em>Forbes</em> (2024–2025) on parenthood, startup culture, and DEI allyship</li>
-          <li><strong>Award</strong> Unipreneurs — one of Germany’s Top&nbsp;20 entrepreneurship professors (2023)</li>
-          <li><strong>Editorial</strong> Associate Editor, Journal of Business Venturing Insights</li>
+          <li><strong>In the press</strong> Research covered in Forbes (2024 and 2025) on parenthood and startup culture, and on DEI allyship.</li>
+          <li><strong>Award</strong> Named one of Germany's top 20 entrepreneurship professors (Unipreneurs, 2023).</li>
+          <li><strong>Editorial</strong> Associate Editor, Journal of Business Venturing Insights.</li>
         </ul>
         <ul class="factlist">
-          <li><strong>Keynotes</strong> UnternehmerTUM, EXIST Women, Motius/Spacewalk, TU Dortmund, and more</li>
-          <li><strong>Advisory</strong> Investment Committee, Spacewalk VC (deep-tech fund); Board, CDTM</li>
-          <li><strong>Podcasts</strong> Mostly Awesome (CDTM) and others <span class="check">[CHECK] which to feature</span></li>
+          <li><strong>Keynotes</strong> UnternehmerTUM, EXIST Women, Motius and Spacewalk, TU Dortmund, and others.</li>
+          <li><strong>Advisory</strong> Investment committee at Spacewalk VC, and board member at CDTM.</li>
+          <li><strong>Podcasts</strong> Mostly Awesome (CDTM). <span class="check">[CHECK] which to feature</span></li>
         </ul>
       </div>
     </section>
@@ -194,21 +190,21 @@
     <section id="contact">
       <div class="contact-card">
         <div>
-          <h2>Let’s talk.</h2>
-          <p style="color:#bdb8ad; margin-top:0.4rem;">Speaking, executive programs, research collaboration, or doctoral supervision.</p>
+          <h2>Get in touch</h2>
+          <p>For speaking, executive programs, research collaboration, or doctoral supervision.</p>
         </div>
-        <div style="text-align:right;">
+        <div style="text-align:left;">
           <a class="mail" href="mailto:hana.milanov@imd.org">hana.milanov@imd.org</a>
-          <div class="links" style="margin-top:0.8rem;">
-            <a href="#">LinkedIn</a>
-            <a href="#">Google Scholar</a>
-            <a href="#">IMD Profile</a>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/hanamilanov/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="#">IMD Profile <span class="check">[CHECK]</span></a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">© 2026 Hana Milanov · IMD Lausanne · <span class="check">[CHECK] confirm exact title &amp; chair</span></footer>
+  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. <span class="check">[CHECK] confirm exact title and chair</span></footer>
 </body>
 </html>
