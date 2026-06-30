@@ -7,26 +7,28 @@
   <meta name="description" content="Hana Milanov is Professor of Entrepreneurship at IMD Lausanne. She researches how new ventures get started, raise resources, and grow." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #f7f5ee;
       --ink: #17160f;
       --muted: #6a665a;
-      --yellow: #f4c20d;
+      --yellow: #e2ab38;
+      --yellow-soft: #f3e1b0;
+      --navy: #0e1a3c;
       --line: #e2ddcd;
       --card: #fffefb;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { font-family:'Inter', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
-    .grotesk { font-family:'Space Grotesk', system-ui, sans-serif; }
+    body { font-family:'Open Sans', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    .grotesk { font-family:'DM Sans', system-ui, sans-serif; }
     .wrap { max-width:1120px; margin:0 auto; padding:0 6vw; }
     a { color:inherit; }
 
     nav { position:sticky; top:0; z-index:50; background:rgba(247,245,238,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
     nav .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; }
-    .brand { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.08rem; letter-spacing:-0.01em; }
+    .brand { font-family:'DM Sans',sans-serif; font-weight:700; font-size:1.08rem; letter-spacing:-0.01em; }
     .navlinks { display:flex; gap:1.7rem; }
     .navlinks a { text-decoration:none; font-size:0.9rem; color:var(--muted); transition:color .15s; }
     .navlinks a:hover { color:var(--ink); }
@@ -35,12 +37,12 @@
 
     .hero { display:grid; grid-template-columns:1.25fr 0.75fr; gap:3.2rem; align-items:stretch; padding:4.5rem 0; }
     .hero-left { display:flex; flex-direction:column; justify-content:center; }
-    .hi { font-family:'Space Grotesk',sans-serif; color:var(--muted); font-size:1.05rem; }
-    .hero h1 { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2.6rem, 5.8vw, 4.4rem); line-height:1.22; letter-spacing:-0.03em; margin:0.9rem 0 1.4rem; }
+    .hi { font-family:'DM Sans',sans-serif; color:var(--muted); font-size:1.05rem; }
+    .hero h1 { font-family:'DM Sans',sans-serif; font-weight:600; font-size:clamp(2.6rem, 5.8vw, 4.4rem); line-height:1.22; letter-spacing:-0.03em; margin:0.9rem 0 1.4rem; }
     .hl { line-height:inherit; }
     .hero .sub { color:var(--muted); font-size:1.12rem; max-width:42ch; }
     .hero .actions { margin-top:2rem; display:flex; gap:0.8rem; flex-wrap:wrap; }
-    .btn { text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.94rem; padding:0.72rem 1.4rem; border-radius:8px; transition:all .15s; }
+    .btn { text-decoration:none; font-family:'DM Sans',sans-serif; font-weight:600; font-size:0.94rem; padding:0.72rem 1.4rem; border-radius:8px; transition:all .15s; }
     .btn.solid { background:var(--ink); color:var(--bg); }
     .btn.solid:hover { background:var(--yellow); color:var(--ink); }
     .btn.line { border:1.5px solid var(--ink); }
@@ -48,34 +50,47 @@
     .hero-photo { position:relative; min-height:440px; }
     .hero-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; border-radius:16px; }
 
+    /* Full-width speaking band with box + logo overlaid inside the photo */
+    .band { position:relative; width:100%; height:clamp(580px, 88vh, 860px); margin:0 0 4.5rem; overflow:hidden;
+            background-image:url('assets/hana-speaking.jpg'); background-repeat:no-repeat; background-size:cover; background-position:center 36%; }
+    .band-overlay { position:absolute; left:6vw; top:8%; max-width:460px; display:flex; flex-direction:column; align-items:flex-start; gap:0.9rem; }
+    .band-box { background:rgba(226,171,56,0.85); backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); border-radius:4px; padding:1.9rem 2.1rem; }
+    .band-quote { font-family:'DM Sans',sans-serif; font-weight:700; color:var(--navy); font-size:clamp(1.45rem,2.7vw,1.95rem); line-height:1.3; letter-spacing:-0.015em; }
+    .band-logo { height:60px; width:auto; display:block; border-radius:4px; }
+
     .strip { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .strip .wrap { display:flex; flex-wrap:wrap; gap:0 1.6rem; padding:1.05rem 6vw; font-family:'Space Grotesk',sans-serif; font-size:0.9rem; color:var(--muted); }
+    .strip .wrap { display:flex; flex-wrap:wrap; gap:0 1.6rem; padding:1.05rem 6vw; font-family:'DM Sans',sans-serif; font-size:0.9rem; color:var(--muted); }
     .strip b { color:var(--ink); font-weight:600; }
     .strip .sep { color:var(--yellow); }
 
     section { padding:5rem 0; border-top:1px solid var(--line); }
     section:first-of-type { border-top:none; }
-    .label { font-family:'Space Grotesk',sans-serif; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:1.3rem; }
-    .big { font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(1.9rem,4.2vw,2.9rem); line-height:1.12; letter-spacing:-0.02em; max-width:22ch; }
+    .label { font-family:'DM Sans',sans-serif; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:1.3rem; }
+    .big { font-family:'DM Sans',sans-serif; font-weight:500; font-size:clamp(1.9rem,4.2vw,2.9rem); line-height:1.12; letter-spacing:-0.02em; max-width:22ch; }
     .body { color:#403c33; font-size:1.12rem; max-width:62ch; margin-top:1.4rem; }
     .body + .body { margin-top:1rem; }
 
-    .rgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.9rem; margin-top:2.4rem; }
-    .rcard { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.4rem 1.25rem; }
+    .rgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2.4rem; }
+    .rcard { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.6rem 1.5rem; }
     .teach-photo img { width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 30%; border-radius:14px; display:block; }
     .impressum { max-width:62ch; color:#403c33; font-size:1rem; }
     .impressum p { margin-bottom:0.85rem; }
-    .impressum strong { color:var(--ink); font-family:'Space Grotesk',sans-serif; }
-    .rcard .n { font-family:'Space Grotesk',sans-serif; font-weight:700; color:var(--yellow); font-size:1.1rem; -webkit-text-stroke:0.4px #c79e00; }
-    .rcard h3 { font-family:'Space Grotesk',sans-serif; font-size:1.12rem; margin:0.5rem 0 0.4rem; font-weight:600; }
-    .rcard p { color:var(--muted); font-size:0.95rem; }
+    .impressum strong { color:var(--ink); font-family:'DM Sans',sans-serif; }
+    .impressum-details summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:2.5rem; }
+    .impressum-details summary::-webkit-details-marker { display:none; }
+    .impressum-details summary::after { content:"+"; font-family:'DM Sans',sans-serif; color:var(--yellow); font-weight:700; }
+    .impressum-details[open] summary::after { content:"\2013"; }
+    .impressum-details[open] summary { margin-bottom:0; }
+    .rcard .n { font-family:'DM Sans',sans-serif; font-weight:700; color:var(--yellow); font-size:1.1rem; -webkit-text-stroke:0.4px #c79e00; }
+    .rcard h3 { font-family:'DM Sans',sans-serif; font-size:1.18rem; line-height:1.25; margin:0.6rem 0 0.6rem; font-weight:600; }
+    .rcard p { color:var(--muted); font-size:0.97rem; }
 
     .pubs { list-style:none; margin-top:2.4rem; }
     .pubs li { display:grid; grid-template-columns:60px 1fr; gap:1.1rem; padding:1.25rem 0; border-top:1px solid var(--line); align-items:baseline; }
-    .pubs .yr { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1rem; }
-    .pubs .ttl { font-family:'Space Grotesk',sans-serif; font-size:1.12rem; font-weight:500; line-height:1.35; }
+    .pubs .yr { font-family:'DM Sans',sans-serif; font-weight:600; font-size:1rem; }
+    .pubs .ttl { font-family:'DM Sans',sans-serif; font-size:1.12rem; font-weight:500; line-height:1.35; }
     .pubs .jr { color:var(--muted); font-size:0.92rem; margin-top:0.3rem; }
-    .scholar { margin-top:1.6rem; font-size:0.95rem; font-family:'Space Grotesk',sans-serif; }
+    .scholar { margin-top:1.6rem; font-size:0.95rem; font-family:'DM Sans',sans-serif; }
     .scholar a { font-weight:600; text-decoration:none; border-bottom:2px solid var(--yellow); }
 
     .split { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
@@ -83,29 +98,37 @@
     .flist { list-style:none; }
     .flist li { padding:1rem 0; border-top:1px solid var(--line); }
     .flist li:first-child { border-top:none; }
-    .flist .k { font-family:'Space Grotesk',sans-serif; color:var(--muted); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; }
+    .flist .k { font-family:'DM Sans',sans-serif; color:var(--muted); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; }
     .flist .v { margin-top:0.3rem; color:#403c33; }
 
-    .contact { background:var(--ink); color:var(--bg); border-radius:20px; padding:4rem 3rem; text-align:center; }
-    .contact h2 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4.6vw,3rem); letter-spacing:-0.02em; }
+    .contact { background:var(--ink); color:var(--bg); border-radius:20px; padding:3rem; display:grid; grid-template-columns:0.85fr 1.15fr; gap:3rem; align-items:center; }
+    .contact-photo img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center top; border-radius:14px; display:block; }
+    .contact h2 { font-family:'DM Sans',sans-serif; font-size:clamp(2rem,4.6vw,3rem); letter-spacing:-0.02em; }
     .contact h2 .hl { color:var(--ink); }
-    .contact p { color:#b6b2a6; margin-top:0.7rem; max-width:40ch; margin-left:auto; margin-right:auto; }
-    .contact a.mail { display:inline-block; margin-top:1.6rem; font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:600; color:var(--yellow); text-decoration:none; }
+    .contact p { color:#b6b2a6; margin-top:0.7rem; max-width:40ch; }
+    .contact a.mail { display:inline-block; margin-top:1.6rem; font-family:'DM Sans',sans-serif; font-size:1.45rem; font-weight:600; color:var(--yellow); text-decoration:none; }
     .contact .social { margin-top:1.6rem; }
-    .contact .social a { color:#cfcabd; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:500; margin:0 0.75rem; }
+    .contact .social a { color:#cfcabd; text-decoration:none; font-family:'DM Sans',sans-serif; font-weight:500; margin:0 0.75rem; }
     .contact .social a:hover { color:#fff; }
 
-    footer { padding:2.5rem 0 3.4rem; color:var(--muted); font-size:0.85rem; }
+    footer { color:var(--muted); font-size:0.85rem; }
+    footer.wrap { padding:2.5rem 6vw 1cm; }
     .check { background:#fff1bf; color:#7a5c00; font-weight:600; font-size:0.78em; padding:1px 6px; border-radius:5px; }
 
     @media (max-width:760px){
       .hero { grid-template-columns:1fr; gap:2rem; padding:3rem 0; }
       .hero-photo { min-height:340px; order:-1; }
       .navlinks { display:none; }
-      .rgrid { grid-template-columns:1fr 1fr; }
+      .rgrid { grid-template-columns:1fr; }
+      .band { height:80vh; background-size:cover; background-position:60% 26%; }
+      .band-overlay { left:1.1rem; right:1.1rem; top:1.3rem; max-width:none; gap:0.8rem; }
+      .band-box { padding:1.5rem 1.4rem; width:100%; }
+      .band-quote { font-size:1.25rem; }
+      .band-logo { height:48px; }
       .split { grid-template-columns:1fr; gap:2rem; }
       .teach-photo { order:-1; }
-      .contact { padding:2.4rem 1.8rem; }
+      .contact { grid-template-columns:1fr; gap:2rem; padding:2.4rem 1.8rem; }
+      .contact-photo img { aspect-ratio:4/3; }
     }
   </style>
 </head>
@@ -123,39 +146,36 @@
     </div>
   </nav>
 
-  <header class="wrap">
-    <div class="hero">
-      <div class="hero-left">
-        <div class="hi">Hi, I'm Hana.</div>
-        <h1 class="grotesk">I study how <span class="hl">new ventures</span> get started, and what helps them grow.</h1>
-        <p class="sub">Professor of Entrepreneurship at IMD Lausanne. Research in leading journals, with work covered by Forbes.</p>
-        <div class="actions">
-          <a class="btn solid" href="#research">Read my research</a>
-          <a class="btn line" href="#contact">Get in touch</a>
-        </div>
+  <div class="band" role="img" aria-label="Hana Milanov speaking to an audience at IMD">
+    <div class="band-overlay">
+      <div class="band-box">
+        <p class="band-quote grotesk">I research how opportunities get created, and who gets to pursue them.</p>
       </div>
-      <div class="hero-photo">
-        <img src="assets/hana-hero.jpg" alt="Hana Milanov" />
-      </div>
+      <img class="band-logo" src="assets/unipreneurs-logo.png" alt="Unipreneurs" />
     </div>
-  </header>
+  </div>
 
   <main class="wrap">
     <section id="about">
-      <div class="label">About</div>
-      <div class="big grotesk">A global view, built across <span class="hl">five countries</span>.</div>
-      <p class="body">Hana Milanov is Professor of Entrepreneurship at IMD in Lausanne. She has lived and worked in five countries, and her research looks at how new ventures get off the ground.</p>
-      <p class="body">Her work studies how founders spot opportunities, raise resources when they start with very little, and handle the human side of building a company, including questions of identity, team, and career. Before IMD she spent more than a decade at the Technical University of Munich, where she was Senior Vice President for International Alliances and directed the EMBA in Innovation and Business Creation, ranked first by the Financial Times.</p>
+      <div class="split">
+        <div>
+          <div class="label">About</div>
+          <div class="big grotesk">A global view, built across <span class="hl">five countries</span>.</div>
+        </div>
+        <div>
+          <p class="body" style="margin-top:0;">Hana Milanov is Professor of Entrepreneurship at IMD in Lausanne. She has lived and worked in five countries, and her research looks at how new ventures get off the ground.</p>
+          <p class="body">Her work studies how founders spot opportunities, raise resources when they start with very little, and handle the human side of building a company, including questions of identity, team, and career. Before IMD she spent more than a decade at the Technical University of Munich, where she was Senior Vice President for International Alliances and directed the EMBA in Innovation and Business Creation, ranked first by the Financial Times.</p>
+        </div>
+      </div>
     </section>
 
     <section id="research">
       <div class="label">Research</div>
-      <div class="big grotesk">My research interests.</div>
+      <div class="big grotesk">What I am interested in.</div>
       <div class="rgrid">
-        <div class="rcard"><div class="n">01</div><h3>Opportunity recognition</h3><p>How founders notice and develop the opportunities they pursue.</p></div>
-        <div class="rcard"><div class="n">02</div><h3>Resourcefulness</h3><p>How early ventures build something out of very little, often through bricolage.</p></div>
-        <div class="rcard"><div class="n">03</div><h3>Gender and inclusion</h3><p>Funding gaps in femtech, bias in crowdfunding, and male allyship.</p></div>
-        <div class="rcard"><div class="n">04</div><h3>Networks and status</h3><p>How a venture's first relationships shape its reputation and growth abroad.</p></div>
+        <div class="rcard"><div class="n">01</div><h3>Who gets to participate in opportunities</h3><p>I study who gains access to entrepreneurial opportunities and who gets overlooked. Recent work looks at funding gaps in femtech, bias in crowdfunding, and what genuinely creates value for the people who take part.</p></div>
+        <div class="rcard"><div class="n">02</div><h3>How opportunities get mobilized</h3><p>Building a venture takes more than money. I study how founders mobilize resources when they start with very little, the stories they tell, and the networks and stakeholders they move to get going.</p></div>
+        <div class="rcard"><div class="n">03</div><h3>How language opens or closes doors</h3><p>The way we talk about entrepreneurs shapes who feels they belong. I study how confrontational or exclusive language changes who engages, and I translate that critical research into something executives can act on.</p></div>
       </div>
 
       <ul class="pubs">
@@ -168,22 +188,20 @@
     </section>
 
     <section id="teaching">
-      <div class="label">Teaching &amp; Executive Education</div>
+      <div class="big grotesk" style="margin-bottom:2rem;">Teaching &amp; Executive Education</div>
       <div class="split">
-        <div class="teach-photo">
-          <img src="assets/hana-speaking.jpg" alt="Hana Milanov speaking at a conference" />
-        </div>
         <ul class="flist">
           <li><div class="k">Approach</div><div class="v">Participant-centered classes from bachelor to PhD, in five countries, and in person, online, and hybrid.</div></li>
-          <li><div class="k">Academic Director</div><div class="v">EMBA in Innovation and Business Creation, with UnternehmerTUM. Ranked first by the Financial Times in 2023 and 2024.</div></li>
           <li><div class="k">Corporate programs</div><div class="v">Siemens, GE Aerospace, and Sandoz. Faculty on the IE-Brown EMBA.</div></li>
+        </ul>
+        <ul class="flist">
           <li><div class="k">Recognition</div><div class="v">Several teaching awards at TUM and IE Business School.</div></li>
         </ul>
       </div>
     </section>
 
     <section id="speaking">
-      <div class="label">Speaking &amp; Media</div>
+      <div class="big grotesk" style="margin-bottom:2rem;">Speaking &amp; Media</div>
       <div class="split">
         <ul class="flist">
           <li><div class="k">In the press</div><div class="v">Research covered in Forbes (2024 and 2025) on parenthood and startup culture, and on DEI allyship.</div></li>
@@ -200,31 +218,24 @@
 
     <section id="contact" style="border-top:none;">
       <div class="contact">
-        <h2 class="grotesk">Let's <span class="hl">talk</span>.</h2>
-        <p>For speaking, executive programs, research collaboration, or doctoral supervision.</p>
-        <a class="mail" href="mailto:hana.milanov@imd.org">hana.milanov@imd.org</a>
-        <div class="social">
-          <a href="https://www.linkedin.com/in/hanamilanov/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="#">IMD Profile</a>
+        <div class="contact-photo">
+          <img src="assets/hana-alt.png" alt="Hana Milanov" />
+        </div>
+        <div class="contact-body">
+          <h2 class="grotesk">Let's <span class="hl">talk</span>.</h2>
+          <p>For speaking, executive programs, research collaboration, or doctoral supervision.</p>
+          <a class="mail" href="mailto:hana.milanov@imd.org">hana.milanov@imd.org</a>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/hanamilanov/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="#">IMD Profile</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="impressum">
-      <div class="label">Legal</div>
-      <div class="big grotesk" style="font-size:clamp(1.7rem,3.6vw,2.4rem);">Impressum</div>
-      <div class="impressum" style="margin-top:1.6rem;">
-        <p>Information provided as legally required. <span class="check">[CHECK] confirm jurisdiction: Germany (§ 5 DDG) or Switzerland</span></p>
-        <p><strong>Responsible for content</strong><br/>Prof. Hana Milanov</p>
-        <p><strong>Address</strong><br/><span class="check">[CHECK] postal address</span></p>
-        <p><strong>Contact</strong><br/>Email: hana.milanov@imd.org<br/>Phone: <span class="check">[CHECK] phone number</span></p>
-        <p><strong>VAT identification number</strong><br/><span class="check">[CHECK] if applicable</span></p>
-        <p><strong>Liability and copyright</strong><br/><span class="check">[CHECK] standard liability/copyright disclaimer text</span></p>
-      </div>
-    </section>
   </main>
 
-  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. &nbsp;·&nbsp; <a href="#impressum" style="color:inherit;">Impressum</a> &nbsp;·&nbsp; <span class="check">[CHECK] confirm exact title and chair</span></footer>
+  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. &nbsp;·&nbsp; <a href="impressum.html" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--yellow);">Impressum</a></footer>
 </body>
 </html>

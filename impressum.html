@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum | Hana Milanov</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f7f5ee; --ink:#17160f; --muted:#6a665a; --yellow:#f4c20d; --line:#e2ddcd; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:1120px; margin:0 auto; padding:0 6vw; }
+    a { color:inherit; }
+    nav { position:sticky; top:0; z-index:50; background:rgba(247,245,238,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+    nav .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; }
+    .brand { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.08rem; letter-spacing:-0.01em; text-decoration:none; }
+    .back { font-family:'Space Grotesk',sans-serif; font-size:0.9rem; color:var(--muted); text-decoration:none; }
+    .back:hover { color:var(--ink); }
+    main { padding:4.5rem 0 2rem; }
+    h1 { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2rem,4.6vw,3rem); letter-spacing:-0.02em; margin-bottom:2rem; }
+    .impressum { max-width:62ch; color:#403c33; font-size:1rem; }
+    .impressum p { margin-bottom:0.95rem; }
+    .impressum strong { color:var(--ink); font-family:'Space Grotesk',sans-serif; }
+    .check { background:#fff1bf; color:#7a5c00; font-weight:600; font-size:0.78em; padding:1px 6px; border-radius:5px; }
+    footer { color:var(--muted); font-size:0.85rem; }
+    footer.wrap { padding:2.5rem 6vw 1cm; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="option-c-bold.html">Hana Milanov</a>
+      <a class="back" href="option-c-bold.html">&larr; Back to site</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <h1 class="grotesk">Impressum</h1>
+    <div class="impressum">
+      <p>Information provided as legally required. <span class="check">[CHECK] confirm jurisdiction: Germany (§ 5 DDG) or Switzerland</span></p>
+      <p><strong>Responsible for content</strong><br/>Prof. Hana Milanov</p>
+      <p><strong>Address</strong><br/><span class="check">[CHECK] postal address</span></p>
+      <p><strong>Contact</strong><br/>Email: hana.milanov@imd.org<br/>Phone: <span class="check">[CHECK] phone number</span></p>
+      <p><strong>VAT identification number</strong><br/><span class="check">[CHECK] if applicable</span></p>
+      <p><strong>Liability and copyright</strong><br/><span class="check">[CHECK] standard liability/copyright disclaimer text</span></p>
+    </div>
+  </main>
+
+  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne.</footer>
+</body>
+</html>
