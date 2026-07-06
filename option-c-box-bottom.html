@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hana Milanov | Variante: Box unten</title>
+  <meta name="description" content="Hana Milanov is Professor of Entrepreneurship at IMD Lausanne. She researches how new ventures get started, raise resources, and grow." />
+  <meta property="og:title" content="Hana Milanov — Professor of Entrepreneurship, IMD Lausanne" />
+  <meta property="og:description" content="I research how opportunities get created, and who gets to pursue them." />
+  <meta property="og:image" content="assets/hana-speaking.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='none' stroke='%23e2ab38' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="preload" as="image" href="assets/hana-speaking.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f5ee;
+      --ink: #17160f;
+      --body-ink: #3d3a30;
+      --muted: #6a665a;
+      --yellow: #e2ab38;
+      --navy: #0e1a3c;
+      --line: #e2ddcd;
+      --card: #fffefb;
+      --nav-h: 64px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    .grotesk { font-family:'DM Sans', system-ui, sans-serif; }
+    .wrap { max-width:1120px; margin:0 auto; padding:0 6vw; }
+    a { color:inherit; }
+    img { max-width:100%; }
+    :focus-visible { outline:2px solid var(--yellow); outline-offset:3px; border-radius:2px; }
+
+    /* ---------- Nav ---------- */
+    nav { position:sticky; top:0; z-index:50; background:rgba(247,245,238,.86); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    .navbar { display:flex; align-items:center; justify-content:space-between; height:var(--nav-h); padding:0 6vw; }
+    .brand { font-family:'DM Sans',sans-serif; font-weight:700; font-size:1.05rem; letter-spacing:-0.01em; text-decoration:none; }
+    .navlinks { display:flex; gap:1.9rem; }
+    .navlinks a { text-decoration:none; font-family:'DM Sans',sans-serif; font-size:0.92rem; color:var(--muted); padding:0.35rem 0; border-bottom:2px solid transparent; transition:color .15s, border-color .15s; }
+    .navlinks a:hover { color:var(--ink); }
+    .navlinks a[aria-current="true"] { color:var(--ink); border-bottom-color:var(--yellow); }
+    .menu-btn { display:none; background:none; border:0; width:44px; height:44px; margin-right:-10px; cursor:pointer; position:relative; }
+    .menu-btn span { position:absolute; left:11px; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:transform .25s ease, top .25s ease; }
+    .menu-btn span:first-child { top:17px; }
+    .menu-btn span:last-child { top:25px; }
+    .menu-btn[aria-expanded="true"] span:first-child { top:21px; transform:rotate(45deg); }
+    .menu-btn[aria-expanded="true"] span:last-child { top:21px; transform:rotate(-45deg); }
+    .mobile-menu { display:none; border-top:1px solid var(--line); padding:0.6rem 6vw 1.1rem; flex-direction:column; }
+    .mobile-menu a { text-decoration:none; font-family:'DM Sans',sans-serif; font-size:1.05rem; font-weight:500; padding:0.75rem 0; border-bottom:1px solid var(--line); }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu.open { display:flex; }
+
+    .hl { background:var(--yellow); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; border-radius:2px; line-height:inherit; }
+
+    /* ---------- Full-bleed speaking band with the yellow box ---------- */
+    .band { position:relative; width:100%; height:clamp(560px, calc(100svh - var(--nav-h)), 840px); overflow:hidden;
+            background-image:url('assets/hana-speaking.jpg'); background-repeat:no-repeat; background-size:cover; background-position:center 36%; }
+    .band-overlay { position:absolute; left:6vw; top:9%; max-width:480px; display:flex; flex-direction:column; align-items:flex-start; gap:1rem; }
+    .band-box { background:rgba(226,171,56,0.92); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); border-radius:5px; padding:1.9rem 2.1rem 2rem; box-shadow:0 20px 50px -24px rgba(14,26,60,0.45); }
+    .band-quote { font-family:'DM Sans',sans-serif; font-weight:700; color:var(--navy); font-size:clamp(1.45rem,2.6vw,1.9rem); line-height:1.32; letter-spacing:-0.015em; }
+    .band-byline { font-family:'DM Sans',sans-serif; font-weight:500; font-size:0.92rem; color:var(--navy); opacity:0.85; margin-top:0.9rem; }
+    .band-logo { height:56px; width:auto; display:block; border-radius:4px; box-shadow:0 12px 30px -16px rgba(14,26,60,0.5); }
+
+    /* ---------- Sections ---------- */
+    main section { padding:5.5rem 0; border-top:1px solid var(--line); scroll-margin-top:calc(var(--nav-h) + 8px); }
+    main section:first-of-type { border-top:none; }
+    .label { font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:1.3rem; }
+    .big { font-family:'DM Sans',sans-serif; font-weight:500; font-size:clamp(1.8rem,4vw,2.7rem); line-height:1.15; letter-spacing:-0.02em; max-width:24ch; text-wrap:balance; }
+    .body { color:var(--body-ink); font-size:1.08rem; max-width:62ch; margin-top:1.4rem; }
+    .body + .body { margin-top:1rem; }
+
+    .rgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; margin-top:2.6rem; }
+    .rcard { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.7rem 1.6rem 1.8rem; transition:border-color .2s, transform .2s, box-shadow .2s; }
+    .rcard:hover { border-color:#cfc8ae; transform:translateY(-2px); box-shadow:0 14px 30px -22px rgba(23,22,15,0.3); }
+    .rcard .tag { display:inline-block; font-family:'DM Sans',sans-serif; font-weight:600; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--navy); background:var(--yellow); border-radius:99px; padding:0.28rem 0.75rem; }
+    .rcard h3 { font-family:'DM Sans',sans-serif; font-size:1.16rem; line-height:1.3; margin:0.95rem 0 0.55rem; font-weight:600; letter-spacing:-0.01em; }
+    .rcard p { color:var(--muted); font-size:0.96rem; }
+
+    .pubs { list-style:none; margin-top:2.6rem; }
+    .pubs li { display:grid; grid-template-columns:64px 1fr; gap:1.1rem; padding:1.3rem 0; border-top:1px solid var(--line); align-items:baseline; }
+    .pubs .yr { font-family:'DM Sans',sans-serif; font-weight:600; font-size:0.98rem; color:var(--muted); }
+    .pubs .ttl { font-family:'DM Sans',sans-serif; font-size:1.12rem; font-weight:500; line-height:1.4; letter-spacing:-0.01em; }
+    .pubs .jr { color:var(--muted); font-size:0.92rem; margin-top:0.35rem; }
+    .pubs .jr em { font-style:italic; }
+    .scholar { margin-top:1.8rem; font-size:0.95rem; font-family:'DM Sans',sans-serif; }
+    .scholar a { font-weight:600; text-decoration:none; border-bottom:2px solid var(--yellow); padding-bottom:1px; transition:background .15s; }
+    .scholar a:hover { background:var(--yellow); }
+
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:3.2rem; }
+    .flist { list-style:none; }
+    .flist li { padding:1.05rem 0; border-top:1px solid var(--line); }
+    .flist li:first-child { border-top:none; padding-top:0; }
+    .flist .k { font-family:'DM Sans',sans-serif; color:var(--muted); font-weight:600; font-size:0.74rem; letter-spacing:0.11em; text-transform:uppercase; }
+    .flist .v { margin-top:0.35rem; color:var(--body-ink); font-size:1.02rem; }
+
+    /* ---------- Contact ---------- */
+    .contact { background:var(--ink); color:var(--bg); border-radius:20px; padding:3rem; display:grid; grid-template-columns:0.85fr 1.15fr; gap:3rem; align-items:center; }
+    .contact-photo img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center top; border-radius:14px; display:block; }
+    .contact h2 { font-family:'DM Sans',sans-serif; font-size:clamp(2rem,4.6vw,3rem); letter-spacing:-0.02em; }
+    .contact h2 .hl { color:var(--ink); }
+    .contact p { color:#b6b2a6; margin-top:0.7rem; max-width:40ch; }
+    .contact a.mail { display:inline-block; margin-top:1.6rem; font-family:'DM Sans',sans-serif; font-size:clamp(1.15rem,3.4vw,1.45rem); font-weight:600; color:var(--yellow); text-decoration:none; border-bottom:2px solid transparent; transition:border-color .15s; overflow-wrap:anywhere; }
+    .contact a.mail:hover { border-bottom-color:var(--yellow); }
+    .contact .social { margin-top:1.7rem; display:flex; flex-wrap:wrap; gap:0.4rem 1.5rem; }
+    .contact .social a { color:#cfcabd; text-decoration:none; font-family:'DM Sans',sans-serif; font-weight:500; padding:0.2rem 0; transition:color .15s; }
+    .contact .social a:hover { color:#fff; }
+
+    footer { color:var(--muted); font-size:0.85rem; }
+    footer.wrap { padding:2.6rem 6vw 3rem; text-align:center; }
+    footer a { color:inherit; text-decoration:none; border-bottom:2px solid var(--yellow); }
+    .check { background:#fff1bf; color:#7a5c00; font-weight:600; font-size:0.78em; padding:1px 6px; border-radius:5px; }
+
+    /* ---------- Reveal on scroll (JS adds .reveal; no-JS stays visible) ---------- */
+    .reveal { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity:1; transform:none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      .reveal { opacity:1; transform:none; transition:none; }
+      .rcard, .rcard:hover { transform:none; }
+    }
+    @media print {
+      .reveal { opacity:1; transform:none; }
+    }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width:760px){
+      .navlinks { display:none; }
+      .menu-btn { display:block; }
+
+      .band-overlay { gap:0.8rem; z-index:1; }
+      .band-box { padding:1.35rem 1.4rem 1.45rem; width:100%; }
+      .band-quote { font-size:1.22rem; }
+      .band-byline { font-size:0.82rem; margin-top:0.6rem; }
+      .band-logo { height:42px; }
+
+      main section { padding:3.5rem 0; }
+      .split { grid-template-columns:1fr; gap:2.2rem; }
+      .rgrid { grid-template-columns:1fr; gap:0.9rem; margin-top:2rem; }
+      .pubs li { grid-template-columns:52px 1fr; gap:0.9rem; padding:1.1rem 0; }
+      .contact { grid-template-columns:1fr; gap:1.8rem; padding:1.4rem 1.4rem 2rem; }
+      .contact-photo img { aspect-ratio:3/2; object-position:center 22%; }
+    }
+
+    /* Portrait phones: box at the bottom, flush with the photo's lower edge.
+       The crop is zoomed and bottom-anchored so she sits higher in the frame
+       and the box covers the audience, not her. Height comes from the width
+       (aspect-ratio), never from viewport height — iOS Safari's collapsing
+       toolbars make vh/svh unreliable. */
+    @media (max-width:760px) and (orientation:portrait){
+      .band { height:auto; aspect-ratio:2/3; max-height:640px; background-size:auto 118%; background-position:55% bottom; }
+      .band-overlay { left:5vw; right:5vw; top:auto; bottom:0.8rem; max-width:none; }
+      .band-logo { order:-1; }
+    }
+
+    /* Landscape phones: box on the side, like on desktop. */
+    @media (max-width:760px) and (orientation:landscape){
+      .band { height:auto; aspect-ratio:3/2; max-height:640px; background-position:center 30%; }
+      .band-overlay { left:5vw; top:7%; max-width:min(420px, 60vw); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <a class="brand" href="#top">Hana Milanov</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#speaking">Speaking &amp; Media</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#speaking">Speaking &amp; Media</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="band" id="top" role="img" aria-label="Hana Milanov speaking to an audience at IMD">
+    <div class="band-overlay">
+      <div class="band-box">
+        <h1 class="band-quote grotesk">I research how opportunities get created, and who gets to pursue them.</h1>
+        <p class="band-byline">Professor of Entrepreneurship, IMD Lausanne</p>
+      </div>
+      <img class="band-logo" src="assets/unipreneurs-logo.png" alt="Unipreneurs — one of Germany's top 20 entrepreneurship professors" width="236" height="84" />
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <div class="split">
+        <div>
+          <div class="label">About</div>
+          <h2 class="big grotesk">A global view, built across <span class="hl">five countries</span>.</h2>
+        </div>
+        <div>
+          <p class="body" style="margin-top:0;">Hana Milanov is Professor of Entrepreneurship at IMD in Lausanne. She has lived and worked in five countries, and her research looks at how new ventures get off the ground.</p>
+          <p class="body">Her work studies how founders spot opportunities, raise resources when they start with very little, and handle the human side of building a company, including questions of identity, team, and career. Before IMD she spent more than a decade at the Technical University of Munich, where she was Senior Vice President for International Alliances and directed the EMBA in Innovation and Business Creation, ranked first by the Financial Times.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="label">Research</div>
+      <h2 class="big grotesk">What I am interested in.</h2>
+      <div class="rgrid">
+        <div class="rcard"><span class="tag">Access</span><h3>Who gets to participate in opportunities</h3><p>I study who gains access to entrepreneurial opportunities and who gets overlooked. Recent work looks at funding gaps in femtech, bias in crowdfunding, and what genuinely creates value for the people who take part.</p></div>
+        <div class="rcard"><span class="tag">Resources</span><h3>How opportunities get mobilized</h3><p>Building a venture takes more than money. I study how founders mobilize resources when they start with very little, the stories they tell, and the networks and stakeholders they move to get going.</p></div>
+        <div class="rcard"><span class="tag">Language</span><h3>How language opens or closes doors</h3><p>The way we talk about entrepreneurs shapes who feels they belong. I study how confrontational or exclusive language changes who engages, and I translate that critical research into something executives can act on.</p></div>
+      </div>
+
+      <ul class="pubs">
+        <li><span class="yr">2026</span><div><div class="ttl">Can Lack-of-Fit Penalties Apply to Male Entrepreneurs? Equity Fundraising in Femtech</div><div class="jr"><em>Entrepreneurship Theory &amp; Practice</em>, with Seigner and Lundmark</div></div></li>
+        <li><span class="yr">2023</span><div><div class="ttl">Tweeting like Elon? Confrontational language and new-venture engagement</div><div class="jr"><em>Journal of Business Venturing</em>, with Seigner and Lundmark</div></div></li>
+        <li><span class="yr">2021</span><div><div class="ttl">Beyond bricolage: resource mobilization under extreme scarcity</div><div class="jr"><em>Journal of Business Venturing</em>, with Reypens and Bacq</div></div></li>
+        <li><span class="yr">2013</span><div><div class="ttl">The power of the first relationship: initial network and future status</div><div class="jr"><em>Strategic Management Journal</em>, with Shepherd</div></div></li>
+      </ul>
+      <p class="scholar"><a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">See all publications on Google Scholar</a></p>
+    </section>
+
+    <section id="teaching">
+      <h2 class="big grotesk" style="margin-bottom:2.2rem;">Teaching &amp; Executive Education</h2>
+      <div class="split">
+        <ul class="flist">
+          <li><div class="k">Approach</div><div class="v">Participant-centered classes from bachelor to PhD, in five countries, and in person, online, and hybrid.</div></li>
+          <li><div class="k">Corporate programs</div><div class="v">Siemens, GE Aerospace, and Sandoz. Faculty on the IE-Brown EMBA.</div></li>
+        </ul>
+        <ul class="flist">
+          <li><div class="k">Recognition</div><div class="v">Several teaching awards at TUM and IE Business School.</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="speaking">
+      <h2 class="big grotesk" style="margin-bottom:2.2rem;">Speaking &amp; Media</h2>
+      <div class="split">
+        <ul class="flist">
+          <li><div class="k">In the press</div><div class="v">Research covered in Forbes (2024 and 2025) on parenthood and startup culture, and on DEI allyship.</div></li>
+          <li><div class="k">Award</div><div class="v">One of Germany's top 20 entrepreneurship professors (Unipreneurs, 2023).</div></li>
+          <li><div class="k">Editorial</div><div class="v">Associate Editor, Journal of Business Venturing Insights.</div></li>
+        </ul>
+        <ul class="flist">
+          <li><div class="k">Keynotes</div><div class="v">UnternehmerTUM, EXIST Women, Motius and Spacewalk, TU Dortmund.</div></li>
+          <li><div class="k">Advisory</div><div class="v">Investment committee at Spacewalk VC, and board member at CDTM.</div></li>
+          <li><div class="k">Podcasts</div><div class="v">Mostly Awesome (CDTM). <span class="check">[CHECK] which to feature</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" style="border-top:none;">
+      <div class="contact">
+        <div class="contact-photo">
+          <img src="assets/hana-alt.png" alt="Hana Milanov" loading="lazy" />
+        </div>
+        <div class="contact-body">
+          <h2 class="grotesk">Let's <span class="hl">talk</span>.</h2>
+          <p>For speaking, executive programs, research collaboration, or doctoral supervision.</p>
+          <a class="mail" href="mailto:hana.milanov@imd.org">hana.milanov@imd.org</a>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/hanamilanov/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=PhQWUY8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="#">IMD Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">© 2026 Hana Milanov, IMD Lausanne. &nbsp;·&nbsp; <a href="impressum.html">Impressum</a></footer>
+
+  <script>
+    (function () {
+      // Mobile menu
+      var btn = document.querySelector('.menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Highlight the nav link for the section in view
+      var links = document.querySelectorAll('.navlinks a');
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            links.forEach(function (a) { a.removeAttribute('aria-current'); });
+            var link = byId[entry.target.id];
+            if (link) link.setAttribute('aria-current', 'true');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      document.querySelectorAll('main section').forEach(function (s) { sectionObserver.observe(s); });
+
+      // Gentle reveal on scroll (skipped when reduced motion is preferred)
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('main section > *, .rcard, .pubs li').forEach(function (el) {
+          el.classList.add('reveal');
+          revealObserver.observe(el);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
