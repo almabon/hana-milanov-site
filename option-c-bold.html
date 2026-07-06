@@ -154,10 +154,16 @@
       .band-overlay { left:5vw; right:5vw; top:1.1rem; max-width:none; }
     }
 
-    /* Landscape phones: box on the side, like on desktop. */
-    @media (max-width:760px) and (orientation:landscape){
-      .band { height:auto; aspect-ratio:3/2; max-height:640px; background-position:center 30%; }
-      .band-overlay { left:5vw; top:7%; max-width:min(420px, 60vw); }
+    /* Short screens (phones in landscape, any width): box on the side like
+       on desktop, but the photo is zoomed and left-anchored so she stands
+       clear of the box on the right. */
+    @media (max-height:520px){
+      .band { height:auto; aspect-ratio:16/9; max-height:none; background-size:auto 135%; background-position:left 25%; }
+      .band-overlay { left:5vw; right:auto; top:8%; bottom:auto; max-width:min(400px, 46vw); }
+      .band-box { width:auto; padding:1.2rem 1.35rem; }
+      .band-quote { font-size:1.12rem; }
+      .band-byline { font-size:0.8rem; margin-top:0.55rem; }
+      .band-logo { height:36px; }
     }
   </style>
 </head>
