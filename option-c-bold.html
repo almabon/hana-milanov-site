@@ -132,8 +132,10 @@
       .menu-btn { display:block; }
 
       /* Face sits upper-center of the photo on phones, so the box + logo
-         drop to the bottom of the band instead of overlaying her face. */
-      .band { height:min(78svh, 620px); background-position:55% 22%; }
+         drop to the bottom of the band instead of overlaying her face.
+         Height comes from the width (aspect-ratio), never from viewport
+         height — iOS Safari's collapsing toolbars make vh/svh unreliable. */
+      .band { height:auto; aspect-ratio:2/3; max-height:640px; background-position:55% 25%; }
       .band::after { content:""; position:absolute; inset:auto 0 0 0; height:45%; background:linear-gradient(to top, rgba(14,26,60,0.28), transparent); pointer-events:none; }
       .band-overlay { left:5vw; right:5vw; top:auto; bottom:1.2rem; max-width:none; gap:0.8rem; z-index:1; }
       .band-box { padding:1.35rem 1.4rem 1.45rem; width:100%; }
