@@ -131,13 +131,7 @@
       .navlinks { display:none; }
       .menu-btn { display:block; }
 
-      /* Face sits upper-center of the photo on phones, so the box + logo
-         drop to the bottom of the band instead of overlaying her face.
-         Height comes from the width (aspect-ratio), never from viewport
-         height — iOS Safari's collapsing toolbars make vh/svh unreliable. */
-      .band { height:auto; aspect-ratio:2/3; max-height:640px; background-position:55% 25%; }
-      .band::after { content:""; position:absolute; inset:auto 0 0 0; height:45%; background:linear-gradient(to top, rgba(14,26,60,0.28), transparent); pointer-events:none; }
-      .band-overlay { left:5vw; right:5vw; top:auto; bottom:1.2rem; max-width:none; gap:0.8rem; z-index:1; }
+      .band-overlay { gap:0.8rem; z-index:1; }
       .band-box { padding:1.35rem 1.4rem 1.45rem; width:100%; }
       .band-quote { font-size:1.22rem; }
       .band-byline { font-size:0.82rem; margin-top:0.6rem; }
@@ -149,6 +143,21 @@
       .pubs li { grid-template-columns:52px 1fr; gap:0.9rem; padding:1.1rem 0; }
       .contact { grid-template-columns:1fr; gap:1.8rem; padding:1.4rem 1.4rem 2rem; }
       .contact-photo img { aspect-ratio:3/2; object-position:center 22%; }
+    }
+
+    /* Portrait phones: box above her head. The crop is zoomed so she sits
+       lower in the frame and the window sky above makes room for the box.
+       Height comes from the width (aspect-ratio), never from viewport
+       height — iOS Safari's collapsing toolbars make vh/svh unreliable. */
+    @media (max-width:760px) and (orientation:portrait){
+      .band { height:auto; aspect-ratio:2/3; max-height:640px; background-size:auto 142%; background-position:55% top; }
+      .band-overlay { left:5vw; right:5vw; top:1.1rem; max-width:none; }
+    }
+
+    /* Landscape phones: box on the side, like on desktop. */
+    @media (max-width:760px) and (orientation:landscape){
+      .band { height:auto; aspect-ratio:3/2; max-height:640px; background-position:center 30%; }
+      .band-overlay { left:5vw; top:7%; max-width:min(420px, 60vw); }
     }
   </style>
 </head>
